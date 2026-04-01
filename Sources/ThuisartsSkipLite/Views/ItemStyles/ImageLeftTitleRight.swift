@@ -4,6 +4,8 @@
 //
 //  Created by Milad Ahmad on 26/02/2026.
 //
+#if !SKIP
+
 import SwiftUI
 //import Kingfisher
 
@@ -17,9 +19,10 @@ struct ImageLeftTitleRight: View {
                 DefaultImageComponent(image: image)
                     .frame(width: 150)
                 Text(viewModel.item.title)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.primary)
                 Spacer()
             }
         }
     }
 }
+#endif

@@ -60,10 +60,9 @@ open class MainActivity: AppCompatActivity {
         enableEdgeToEdge()
 
         setContent {
-            val saveableStateHolder = rememberSaveableStateHolder()
-            saveableStateHolder.SaveableStateProvider(true) {
-                PresentationRootView(ComposeContext())
-                SideEffect { saveableStateHolder.removeState(true) }
+            MaterialTheme {
+
+                AndroidMainTabView()
             }
         }
 
@@ -132,36 +131,36 @@ open class MainActivity: AppCompatActivity {
     companion object {
     }
 }
-
-@Composable
-internal fun SyncSystemBarsWithTheme() {
-    val dark = MaterialTheme.colorScheme.background.luminance() < 0.5f
-
-    val transparent = AndroidColor.TRANSPARENT
-    val style = if (dark) {
-        SystemBarStyle.dark(transparent)
-    } else {
-        SystemBarStyle.light(transparent, transparent)
-    }
-
-    val activity = LocalContext.current as? ComponentActivity
-    DisposableEffect(style) {
-        activity?.enableEdgeToEdge(
-            statusBarStyle = style,
-            navigationBarStyle = style
-        )
-        onDispose { }
-    }
-}
-
-@Composable
-internal fun PresentationRootView(context: ComposeContext) {
-    val colorScheme = if (isSystemInDarkTheme()) ColorScheme.dark else ColorScheme.light
-    PresentationRoot(defaultColorScheme = colorScheme, context = context) { ctx ->
-        SyncSystemBarsWithTheme()
-        val contentContext = ctx.content()
-        Box(modifier = ctx.modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            AppRootView().Compose(context = contentContext)
-        }
-    }
-}
+//
+//@Composable
+//internal fun SyncSystemBarsWithTheme() {
+//    val dark = MaterialTheme.colorScheme.background.luminance() < 0.5f
+//
+//    val transparent = AndroidColor.TRANSPARENT
+//    val style = if (dark) {
+//        SystemBarStyle.dark(transparent)
+//    } else {
+//        SystemBarStyle.light(transparent, transparent)
+//    }
+//
+//    val activity = LocalContext.current as? ComponentActivity
+//    DisposableEffect(style) {
+//        activity?.enableEdgeToEdge(
+//            statusBarStyle = style,
+//            navigationBarStyle = style
+//        )
+//        onDispose { }
+//    }
+//}
+//
+//@Composable
+//internal fun PresentationRootView(context: ComposeContext) {
+//    val colorScheme = if (isSystemInDarkTheme()) ColorScheme.dark else ColorScheme.light
+//    PresentationRoot(defaultColorScheme = colorScheme, context = context) { ctx ->
+//        SyncSystemBarsWithTheme()
+//        val contentContext = ctx.content()
+//        Box(modifier = ctx.modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+//            AppRootView().Compose(context = contentContext)
+//        }
+//    }
+//}

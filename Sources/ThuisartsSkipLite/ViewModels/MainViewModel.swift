@@ -9,13 +9,13 @@ import SwiftUI
 
 @MainActor 
 @Observable
-final class MainViewModel {
+public final class MainViewModel {
 
     public private(set) var state: AppConstants.PageState = .loading
 
     public init() {}
 
-    func getData(for path: UrlPath) async {
+    public func getData(for path: UrlPath) async {
 
         let finalUrlString = AppConstants.EndPoints.test + path.rawValue
 

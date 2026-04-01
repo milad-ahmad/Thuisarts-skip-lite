@@ -1,8 +1,9 @@
+#if !SKIP
 import SwiftUI
 
 public struct MainView: View {
 
-    @State internal var viewModel: MainViewModel = MainViewModel()
+    @State public var viewModel: MainViewModel = MainViewModel()
     
     public init() {
     }
@@ -22,3 +23,4 @@ public struct MainView: View {
             }
     }
 }
+#endif

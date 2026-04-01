@@ -4,6 +4,7 @@
 //
 //  Created by Milad Ahmad on 25/02/2026.
 //
+#if !SKIP
 import Foundation
 import SwiftUI
 
@@ -29,3 +30,4 @@ public struct ItemListComponentView: View {
 //#Preview {
 //    TabViews()
 //}
+#endif

@@ -15,7 +15,7 @@ struct ContentView: View {
             NavigationStack {
                 WelcomeView(welcomeName: $welcomeName)
             }
-            .tabItem { Label("Welcome!", systemImage: "heart.fill") }
+            .tabItem { Label("Welcome", systemImage: "heart.fill") }
             .tag(ContentTab.welcome)
 
             NavigationStack {

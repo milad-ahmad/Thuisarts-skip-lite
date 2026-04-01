@@ -4,6 +4,7 @@
 //
 //  Created by Milad Ahmad on 05/03/2026.
 //
+#if !SKIP
 import SwiftUI
 
 public struct TabViews: View {
@@ -42,7 +43,7 @@ public struct TabViews: View {
                 Image(systemName: "person")
                     .renderingMode(.template)
             }
-        }.tint(.indigo)
+        }.tint(.primary)
      
 
     }
@@ -51,3 +52,4 @@ public struct TabViews: View {
 //#Preview {
 //    TabViews()
 //}
+#endif

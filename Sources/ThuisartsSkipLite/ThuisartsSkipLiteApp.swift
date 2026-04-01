@@ -1,7 +1,6 @@
 import Foundation
 import OSLog
 import SwiftUI
-
 /// A logger for the ThuisartsSkipLite module.
 let logger: Logger = Logger(subsystem: "com.example.ThuisartsSkipLite", category: "ThuisartsSkipLite")
 
@@ -13,10 +12,21 @@ public struct ThuisartsSkipLiteRootView : View {
     }
 
     public var body: some View {
+#if !SKIP
+        // Dit ziet alleen iOS. Omdat MainView ook in !SKIP staat,
+        // kan hij hem hier nu veilig vinden.
         MainView()
             .task {
-                logger.info("Skip app logs are viewable in the Xcode console for iOS; Android logs can be viewed in Studio or using adb logcat")
+                logger.info("Running on iOS")
             }
+        #else
+        // Dit ziet Android. Omdat we MainView hier niet aanroepen,
+        // krijgt Skip geen error meer.
+        Text("Android Native UI wordt geladen via Android Studio...")
+            .task {
+                logger.info("Skip logic loaded for Android")
+            }
+        #endif
     }
 }
 
