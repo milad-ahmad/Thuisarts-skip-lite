@@ -4,7 +4,7 @@
 This is an overview of the current proof-of-concepts (PoCs) developed to validate Skip's functionality.
 
 * **[Thuisarts Skip Fuse]**
-    * *Description:* [This project uses Skip Lite to translate the business logic and UI to Kotlin. This means that all the code is getting transpiled to equivalent code in Kotlin. All the shared code is in the Sources folder. All the translated Android code is in the Android folder which you can open separately in Android Studio. There are no seperate screens for Android because all the Android code is automatically getting generated when building the code in Xcode.]
+    * *Description:* This project uses Skip Lite to translate the business logic and UI to Kotlin. This means that all the code is getting transpiled to equivalent code in Kotlin. All the shared code is in the Sources folder. All the translated Android code is in the Android folder which you can open separately in Android Studio. There are no seperate screens for Android because all the Android code is automatically getting generated when building the code in Xcode.
 
 ## 2. Architecture: Shared vs. Platform-Specific Code
 The projects uses the Skip transpiler to maintain a shared codebase.
@@ -35,7 +35,7 @@ Instructions to build and run the app locally.
 ## 4. Known Issues & Open Questions
 
 **Known Issues:**
-* [There is a issue with a function in the TextComponentView. This function does not work on Android. Because of that this function is excluded from the Android code and only runs on iOS. There was an issue with the Apple SF-Symbols which is temporarliy resolved by using different icons for Android. There was an issue with the scrolling on Android. This issue was caused because of nested NavigationStacks in Swift but this is now fixed.]
+* There is a issue with a function in the TextComponentView. This function does not work on Android. Because of that this function is excluded from the Android code and only runs on iOS. There was an issue with the Apple SF-Symbols which is temporarliy resolved by using different icons for Android. There was an issue with the scrolling on Android. This issue was caused because of nested NavigationStacks in Swift but this is now fixed.
 
 **Open Questions for Reviewers:**
 * []
