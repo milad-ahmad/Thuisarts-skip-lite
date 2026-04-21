@@ -4,7 +4,6 @@
 //
 //  Created by Milad Ahmad on 25/02/2026.
 //
-#if !SKIP
 import SwiftUI
 import Foundation
 
@@ -66,4 +65,4 @@ public struct ItemComponentView: View {
 //#Preview {
 //    TabViews()
 //}
-#endif
+

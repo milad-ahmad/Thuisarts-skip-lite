@@ -4,7 +4,6 @@
 //
 //  Created by Milad Ahmad on 02/03/2026.
 //
-#if !SKIP
 import SwiftUI
 
 public struct SectionComponentView: View {
@@ -32,4 +31,3 @@ public struct SectionComponentView: View {
 //#Preview {
 //    TabViews()
 //}
-#endif

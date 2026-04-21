@@ -4,7 +4,7 @@
 //
 //  Created by Milad Ahmad on 26/02/2026.
 //
-#if !SKIP
+
 
 import SwiftUI
 //import Kingfisher
@@ -25,4 +25,3 @@ struct ImageLeftTitleRight: View {
         }
     }
 }
-#endif

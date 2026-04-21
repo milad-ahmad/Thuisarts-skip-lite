@@ -6,7 +6,6 @@
 //
 
 //import Kingfisher
-#if !SKIP
 import SwiftUI
 
 public struct PageView: View {
@@ -66,4 +65,3 @@ struct AccountView: View {
         Text("Account")
     }
 }
-#endif

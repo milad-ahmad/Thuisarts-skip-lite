@@ -4,7 +4,6 @@
 //
 //  Created by Milad Ahmad on 05/03/2026.
 //
-#if !SKIP
 import SwiftUI
 
 public struct TabViews: View {
@@ -19,7 +18,7 @@ public struct TabViews: View {
             Tab(value: 0) {
                 PageView()
             } label: {
-                Image(systemName: "house")
+                Image(systemName: "house.fill")
             }
             Tab(value: 1) {
                 SearchView()
@@ -30,7 +29,7 @@ public struct TabViews: View {
                 BookmarkView()
             } label: {
                 #if os(Android)
-                Image(systemName: "person")
+                Image(systemName: "star.fill")
                 #endif
                 
                 #if !os(Android)
@@ -40,7 +39,7 @@ public struct TabViews: View {
             Tab(value: 3) {
                 AccountView()
             } label: {
-                Image(systemName: "person")
+                Image(systemName: "person.fill")
                     .renderingMode(.template)
             }
         }.tint(.primary)
@@ -52,4 +51,3 @@ public struct TabViews: View {
 //#Preview {
 //    TabViews()
 //}
-#endif

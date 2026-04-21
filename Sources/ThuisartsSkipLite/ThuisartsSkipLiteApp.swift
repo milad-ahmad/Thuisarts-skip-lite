@@ -12,21 +12,10 @@ public struct ThuisartsSkipLiteRootView : View {
     }
 
     public var body: some View {
-#if !SKIP
-        // Dit ziet alleen iOS. Omdat MainView ook in !SKIP staat,
-        // kan hij hem hier nu veilig vinden.
         MainView()
             .task {
-                logger.info("Running on iOS")
+                logger.info("Running on iOS and Android")
             }
-        #else
-        // Dit ziet Android. Omdat we MainView hier niet aanroepen,
-        // krijgt Skip geen error meer.
-        Text("Android Native UI wordt geladen via Android Studio...")
-            .task {
-                logger.info("Skip logic loaded for Android")
-            }
-        #endif
     }
 }
 

@@ -4,7 +4,6 @@
 //
 //  Created by Milad Ahmad on 25/02/2026.
 //
-#if !SKIP
 import Foundation
 import SwiftUI
 
@@ -17,10 +16,14 @@ public struct TextComponentView: View {
     }
 
     public var body: some View {
+        #if os(Android)
+        Text(viewModel.text.content)
+        #else
         let text = convertHTMLLinks(viewModel.text.content)
         Text(.init(text))
+        #endif
     }
-    
+    #if !SKIP
     private func convertHTMLLinks(_ html: String) -> String {
         return html.replacingOccurrences(
             of: "<a\\s+[^>]*href=\"([^\"]+)\"[^>]*>(.*?)</a>",
@@ -28,9 +31,9 @@ public struct TextComponentView: View {
             options: .regularExpression
         )
     }
+    #endif
 }
 
 //#Preview{
 //    TabViews()
 //}
-#endif

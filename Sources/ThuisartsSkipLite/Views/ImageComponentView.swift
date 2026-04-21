@@ -4,7 +4,7 @@
 //
 //  Created by Milad Ahmad on 25/02/2026.
 //
-#if !SKIP
+
     import SwiftUI
     import Foundation
     //import Kingfisher
@@ -103,4 +103,3 @@
 //#Preview{
 //    TabViews()
 //}
-#endif

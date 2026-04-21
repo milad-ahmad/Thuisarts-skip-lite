@@ -1,4 +1,3 @@
-#if !SKIP
 import SwiftUI
 
 public struct MainView: View {
@@ -23,4 +22,3 @@ public struct MainView: View {
             }
     }
 }
-#endif
