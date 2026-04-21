@@ -3,7 +3,7 @@
 ## 1. Inventory of Current Sample Apps
 This is an overview of the current proof-of-concepts (PoCs) developed to validate Skip's functionality.
 
-* **[Thuisarts Skip Fuse]**
+* **[Thuisarts Skip Lite]**
     * *Description:* This project uses Skip Lite to translate the business logic and UI to Kotlin. This means that all the code is getting transpiled to equivalent code in Kotlin. All the shared code is in the Sources folder. All the translated Android code is in the Android folder which you can open separately in Android Studio. There are no seperate screens for Android because all the Android code is automatically getting generated when building the code in Xcode.
 
 ## 2. Architecture: Shared vs. Platform-Specific Code
