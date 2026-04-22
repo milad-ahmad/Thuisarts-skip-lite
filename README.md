@@ -40,4 +40,4 @@ Instructions to build and run the app locally.
 * There is a issue with a function in the TextComponentView. This function does not work on Android. Because of that this function is excluded from the Android code and only runs on iOS. There was an issue with the Apple SF-Symbols which is temporarliy resolved by using different icons for Android. There was an issue with the scrolling on Android. This issue was caused because of nested NavigationStacks in Swift but this is now fixed.
 
 **Open Questions for Reviewers:**
-* []
+* https://icthva-my.sharepoint.com/:w:/g/personal/milad_ahmad_hva_nl/IQDIcWrRQz5mQaaXud5vzZerAZPkIX9cEonXKThuU7LzUgs?e=uENibx
